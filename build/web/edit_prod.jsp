@@ -19,7 +19,7 @@
     <body>
         
         <h1>Editar Producto</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User <%= session.getAttribute("login").toString()%></h2>
     <%
           //Editar Producto
         

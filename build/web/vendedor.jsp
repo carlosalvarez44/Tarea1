@@ -25,6 +25,15 @@
         
         
     }
+    if(request.getParameter("ventas_cli2")!= null){
+        
+        
+        
+
+        response.sendRedirect("ventas_cli.jsp");
+        
+        
+    }
     if(request.getParameter("r_cerrar")!= null){
         
         
@@ -46,7 +55,7 @@
     </head>
     <body>
         <h1>Bienvenido al Menu Vendedor!</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User <%= session.getAttribute("login").toString()%></h2>
         <form method="get" >
            Ingresar Cliente <input type="submit" name="r_ing_cliente" value="Ir" /><br />
            Ingresar Venta <input type="submit" name="r_ing_venta" value="Ir" /><br />

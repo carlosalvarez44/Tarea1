@@ -329,7 +329,7 @@
     </head>
     <body>
         <h1>Ingresar Venta</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User <%= session.getAttribute("login").toString()%></h2>
         <form method="get">
             <select name="clies">
                 <option selected value=""> Elige un Cliente </option>
@@ -372,10 +372,20 @@
          ID Producto :<input type="text" name="r_id"   value="" /><br /> 
          Cantidad Producto :<input type="text" name="r_cant"   value="" /><br /> 
          <input type="submit"  name="r_agregar" value="Agregar Producto"  /><br />
-         <input type="submit"  name="r_finalizar" value="Finalizar Venta"  /><br />
 
         </form>
-                       <input type="submit"  name="r_submito" value="Volver Menu"  /><br />
+         <form  method="get"  >
+           
+                      <input type="submit"  name="r_finalizar" value="Finalizar Venta"  /><br />
 
+           
+         </form>
+         <form  method="get"  >
+           
+              <input type="submit"  name="r_submito" value="Volver Menu"  /><br />
+
+           
+         </form>
+        
     </body>
 </html>

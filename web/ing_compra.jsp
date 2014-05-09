@@ -369,7 +369,7 @@
     </head>
     <body>
         <h1>Ingresar Compra</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User <%= session.getAttribute("login").toString()%></h2>
          <form method="get" onsubmit = "return validar();"  >
             
               ID Producto :<input type="text" name="r_id"   value="" id="n_id" /><br /> 

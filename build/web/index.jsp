@@ -38,6 +38,13 @@
                  if(resultados.next() ){
                     
                     //Se crea sesion "login" y se le setea el tipo admin o vendedor
+                    /* if(session.getAttribute("login")!=null ||session.getAttribute("tipo")!=null ){
+                         
+                         session.removeAttribute("login");
+                         session.removeAttribute("tipo");
+                         session.invalidate();
+                         
+                     } */
                      session.setAttribute("login",true);
                      session.setAttribute("login",resultados.getString("tipo"));
                      String tipo = resultados.getString("tipo");

@@ -62,7 +62,7 @@
     <body>
         
         <h1> Bienvenido al Menu Administrador!</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User <%= session.getAttribute("login").toString()%></h2>
         <form method="get" >
            Ingresar Vendedor <input type="submit" name="r_ing_vendedor" value="ingresar" /><br />
            Ingresar Cliente <input type="submit" name="r_ing_cliente" value="ingresar" /><br />

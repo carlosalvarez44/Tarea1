@@ -84,6 +84,23 @@
              
          }
     }
+    if(request.getParameter("r_submito")!= null){
+        
+                if(session.getAttribute("login").toString()=="administrador"){
+        
+
+                  response.sendRedirect("admin.jsp");
+          
+               }
+               else{
+              
+                response.sendRedirect("vendedor.jsp");
+              
+              }
+        
+        
+      }
+
     
     %>
 
@@ -96,7 +113,7 @@
     </head>
     <body>
         <h1>Ver Ventas Cliente</h1>
-        <h2>User<%=session.getAttribute("login").toString()%></h2>
+        <h2>User<%= session.getAttribute("login").toString()%></h2>
         <form method="get">
             <select name="clies">
                 <option selected value=""> Elige un Cliente </option>
@@ -133,23 +150,7 @@
                     conn.close();
                  }
               }
-              if(request.getParameter("r_submito")!= null){
-        
-                if(session.getAttribute("login").toString()=="administrador"){
-        
-
-                  response.sendRedirect("admin.jsp");
-          
-               }
-               else{
               
-                response.sendRedirect("vendedor.jsp");
-              
-              }
-        
-        
-            }
-
          %>
 
             </select>
