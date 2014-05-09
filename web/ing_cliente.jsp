@@ -26,7 +26,18 @@
          //Conectar BD
          conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "SYSTEM", "creativex");
          conn.createStatement().execute("INSERT INTO Cliente  VALUES ('"+s_rut+"','"+s_nombre+"')");
-         response.sendRedirect("verificar.jsp");
+         if(session.getAttribute("login").toString()=="administrador"){
+             
+             response.sendRedirect("verificar.jsp");
+             
+             
+         }
+         else{
+             
+             response.sendRedirect("verificar2.jsp");
+
+         }
+         
          }
          catch(Exception ex){
              
@@ -44,6 +55,23 @@
          }
          
      }
+       if(request.getParameter("r_submito")!= null){
+        
+          if(session.getAttribute("login").toString()=="administrador"){
+        
+
+             response.sendRedirect("admin.jsp");
+          
+          }
+          else{
+              
+              response.sendRedirect("vendedor.jsp");
+              
+          }
+        
+        
+    } 
+   
    
     
     
@@ -100,11 +128,17 @@
     </head>
     <body>
         <h1>Plantilla Creacion Cliente</h1>
+        <h2>User<%=session.getAttribute("login").toString()%></h2>
         <form method="get" onsubmit = "return validacion();" >
            Rut : <input type="text" name="n_rut"  id="r_rut" value="" /><br />
            Nombre :<input type="text" name="n_nombre" id="r_nombre" value="" /><br />
            <input type="submit" name="r_submit" value="Finalizar" /><br />
-       
         </form>
+         <form  method="get"  >
+           
+          <input type="submit" name="r_submito" value="Volver Menu" /><br />
+
+           
+    </form>
     </body>
 </html>

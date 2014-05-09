@@ -60,7 +60,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <h1> Bienvenido al Menu Administrador!</h1>
+        <h2>User<%=session.getAttribute("login").toString()%></h2>
         <form method="get" >
            Ingresar Vendedor <input type="submit" name="r_ing_vendedor" value="ingresar" /><br />
            Ingresar Cliente <input type="submit" name="r_ing_cliente" value="ingresar" /><br />
@@ -68,7 +70,12 @@
            Ingresar Compra <input type="submit" name="r_ing_compra" value="ingresar" /><br />
            Ingresar Venta <input type="submit" name="r_ing_venta" value="ingresar" /><br />
            Ver ventas a Cliente  <input type="submit" name ="r_ventas_cli" value="ingresar"/><br />
-           Cerrar Sesión  <input type="submit" name ="r_cerrar" value="Salir"/><br />
         </form>
+         <form  method="get"  >
+           
+           Cerrar Sesión  <input type="submit" name ="r_cerrar" value="Salir"/><br />
+            
+           
+    </form>
     </body>
 </html>

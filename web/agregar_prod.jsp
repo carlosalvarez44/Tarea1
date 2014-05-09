@@ -46,6 +46,15 @@
          }
          
      }
+       
+         if(request.getParameter("r_submito")!= null){
+        
+              response.sendRedirect("admin.jsp");
+          
+         
+         }
+
+       
    
     
     
@@ -126,10 +135,12 @@
             
             
             
+            
         </script>
     </head>
     <body>
         <h1>Plantilla Agregar Producto</h1>
+        <h2>User<%=session.getAttribute("login").toString()%></h2>
         <form method="get" onsubmit = "return validacion();"  >
            Codigo Producto : <input type="text" name="r_codigo" id ="cod" value="" /><br />
            Nombre Producto :<input type="text" name="r_nombre" id="nom"  value="" /><br />
@@ -138,9 +149,16 @@
            Cantidad Producto :<input type="text" name="r_cant" id="cant"  value="" /><br />
            Precio Producto :<input type="text" name="r_precio" id="precio"  value="" /><br />
            <input type="submit" name="r_submit" value="Finalizar" /><br />
+           
 
            
        
+    </form>
+    <form  method="get"  >
+           
+         <input type="submit"  name="r_submito" value="Volver Menu"  /><br />
+            
+           
     </form>
         
     </body>

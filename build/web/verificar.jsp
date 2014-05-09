@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Refresh" content="5; url=admin.jsp">
+        <meta http-equiv="Refresh" content="3; url=admin.jsp">
         <title>JSP Page</title>
     </head>
     <body>

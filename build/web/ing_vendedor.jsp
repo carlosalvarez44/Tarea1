@@ -27,7 +27,7 @@
 
 <% 
     
-   String error = "<p>&nbsp;</p>";
+   
    Connection conn= null;
    
     if(request.getParameter("r_submit")!=null)
@@ -59,6 +59,15 @@
          }
          
      }
+     if(request.getParameter("r_submito")!= null){
+        
+        
+        
+
+        response.sendRedirect("admin.jsp");
+        
+        
+    }
    
 
  %>
@@ -140,13 +149,20 @@
     </head>
     <body>
         <h1>Plantilla Creación Vendedor</h1>
+        <h2>User<%=session.getAttribute("login").toString()%></h2>
         <form name="f" method="get" onsubmit = "return validar();" >
            Rut : <input type="text" name="n_rut"  id="r_rut" value="" /><br />
            Contraseña : <input type="password" name ="n_clave" id="r_clave" value="" /><br />
            Repetir Contraseña :<input type="password" name="n_repclave" id="r_repclave" value="" /><br />
            Nombre :<input type="text" name="n_nombre" id="r_nombre" value="" /><br />
            <input type="submit" name="r_submit" value="Finalizar" /><br />
-       
+
         </form>
+        <form  method="get"  >
+           
+            <input type="submit" name="r_submito" value="Volver Menu" /><br />
+
+           
+    </form>
     </body>
 </html>
